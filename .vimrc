@@ -48,7 +48,7 @@
     set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
     set virtualedit=onemore             " Allow for cursor beyond last character
     set history=1000                    " Store a ton of history (default is 20)
-    "set spell                          " Spell checking on
+    set nospell                         " Spell checking off
     set hidden                          " Allow buffer switching without saving
 
     " Instead of reverting the cursor to the last position in the buffer, we
@@ -88,14 +88,6 @@
 
 " Vim UI {
 
-    if filereadable(expand("~/.vim/bundle/vim-colors-solarized/colors/solarized.vim"))
-        let g:solarized_termcolors=16
-        let g:solarized_termtrans=1
-        let g:solarized_contrast="normal"
-        let g:solarized_visibility="normal"
-        color Monokai               " Load a colorscheme
-    endif
-
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
 
@@ -104,7 +96,11 @@
     highlight clear SignColumn      " SignColumn should match background
     highlight clear LineNr          " Current line number row will have same background color in relative mode
     let g:CSApprox_hook_post = ['hi clear SignColumn']
-    "highlight clear CursorLineNr    " Remove highlight color from current line number
+    "highlight clear CursorLineNr   " Remove highlight color from current line number
+
+    color devbox-dark-256           " Load a colorscheme
+    let g:airline_theme = 'simple'  " airline theme
+    set tabline=%!tabber#TabLine()  " tab styles airline-like
 
     if has('cmdline_info')
         set ruler                   " Show the ruler
@@ -149,10 +145,11 @@
 
     set nowrap                      " Do not wrap long lines
     set autoindent                  " Indent at the same level of the previous line
-    set shiftwidth=4                " Use indents of 4 spaces
+    set smarttab
     set expandtab                   " Tabs are spaces, not tabs
-    set tabstop=4                   " An indentation every four columns
-    set softtabstop=4               " Let backspace delete indent
+    set shiftwidth=2                " Use indents of 2 spaces
+    set tabstop=2                   " An indentation every four columns
+    set softtabstop=2               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
     set splitright                  " Puts new vsplit windows to the right of the current
     set splitbelow                  " Puts new split windows to the bottom of the current
