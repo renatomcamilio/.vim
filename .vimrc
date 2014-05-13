@@ -161,7 +161,7 @@
     autocmd FileType go autocmd BufWritePre <buffer> Fmt
     autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
     autocmd BufNewFile,BufRead *.styl,*.stylus set filetype=stylus
-    autocmd FileType haskell setlocal expandtab shiftwidth=2 softtabstop=2
+    autocmd FileType haskell,scala setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
     " preceding line best in a plugin but here for now.
 
     autocmd BufNewFile,BufRead *.coffee set filetype=coffee

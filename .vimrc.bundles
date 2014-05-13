@@ -108,8 +108,8 @@
     " }
 
     " Java {
-        "Bundle 'derekwyatt/vim-scala'
-        "Bundle 'derekwyatt/vim-sbt'
+        Bundle 'derekwyatt/vim-scala'
+        Bundle 'derekwyatt/vim-sbt'
     " }
 
     " Clojure {
