@@ -105,6 +105,7 @@
         Bundle 'elzr/vim-json'
         Bundle 'pangloss/vim-javascript'
         Bundle 'briancollins/vim-jst'
+        Bundle 'mustache/vim-mustache-handlebars'
     " }
 
     " Java {
@@ -132,7 +133,7 @@
 
     " HTML {
         Bundle 'amirh/HTML-AutoCloseTag'
-        Bundle 'gorodinskiy/vim-coloresque'
+        "Bundle 'gorodinskiy/vim-coloresque'
         Bundle 'tpope/vim-haml'
         Bundle 'digitaltoad/vim-jade'
     " }
@@ -152,6 +153,10 @@
 
     " Go Lang {
         "Bundle 'Blackrush/vim-gocode'
+    " }
+
+    " Database {
+        Bundle 'dbext'
     " }
 
     " Misc {
