@@ -24,7 +24,7 @@
 
 " General {
 
-    set background=dark         " Assume a dark background
+    set background=light        " Assume a light background
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " Syntax highlighting
     set mouse=a                 " Automatically enable mouse usage
@@ -98,8 +98,8 @@
     let g:CSApprox_hook_post = ['hi clear SignColumn']
     "highlight clear CursorLineNr   " Remove highlight color from current line number
 
-    color devbox-dark-256           " Load a colorscheme
-    let g:airline_theme = 'simple'  " airline theme
+    color solarized                 " Load a colorscheme
+    "let g:airline_theme = 'simple'  " airline theme
     set tabline=%!tabber#TabLine()  " tab styles airline-like
 
     if has('cmdline_info')
@@ -625,8 +625,9 @@
             set guifont=Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h16,Courier\ New\ Regular:h18
         endif
     else
-        if &term == 'xterm' || &term == 'screen'
-            set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+        if &term == 'xterm' || &term == 'screen' || &term == 'screen-256color' || &term == 'xterm-256color'
+            "set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+            set t_Co=16             " Enable 16 colors to better show solarized theme
         endif
         "set term=builtin_ansi       " Make arrow and other keys work
     endif
