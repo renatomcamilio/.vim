@@ -156,7 +156,7 @@
     " }
 
     " Database {
-        Bundle 'dbext'
+        Bundle 'vim-scripts/dbext.vim'
     " }
 
     " Misc {
