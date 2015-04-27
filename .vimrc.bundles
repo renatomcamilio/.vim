@@ -68,6 +68,7 @@
         "Bundle 'tpope/vim-abolish.git'
         Bundle 'osyo-manga/vim-over'
         "Bundle 'justinmk/vim-sneak'
+        Plugin 'editorconfig-vim'
     " }
 
     " General Programming {
@@ -103,14 +104,15 @@
 
     " Javascript {
         Bundle 'elzr/vim-json'
-        Bundle 'pangloss/vim-javascript'
+        Bundle 'jelera/vim-javascript-syntax'
         Bundle 'briancollins/vim-jst'
         Bundle 'mustache/vim-mustache-handlebars'
+        Plugin 'kchmck/vim-coffee-script'
     " }
 
     " Java {
-        Bundle 'derekwyatt/vim-scala'
-        Bundle 'derekwyatt/vim-sbt'
+        "Bundle 'derekwyatt/vim-scala'
+        "Bundle 'derekwyatt/vim-sbt'
     " }
 
     " Clojure {

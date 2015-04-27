@@ -14,6 +14,18 @@
         let g:airline_powerline_fonts=1
     " }
 
+    " Identify platform {
+        silent function! OSX()
+            return has('macunix')
+        endfunction
+        silent function! LINUX()
+            return has('unix') && !has('macunix') && !has('win32unix')
+        endfunction
+        silent function! WINDOWS()
+            return  (has('win16') || has('win32') || has('win64'))
+        endfunction
+    " }
+
 " }
 
 " Use bundles config {
@@ -24,7 +36,7 @@
 
 " General {
 
-    set background=light        " Assume a light background
+    set background=dark         " Assume a light background
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " Syntax highlighting
     set mouse=a                 " Automatically enable mouse usage
@@ -99,7 +111,7 @@
     "highlight clear CursorLineNr   " Remove highlight color from current line number
 
     color solarized                 " Load a colorscheme
-    "let g:airline_theme = 'simple'  " airline theme
+    let g:airline_theme = 'solarized'  " airline theme
     set tabline=%!tabber#TabLine()  " tab styles airline-like
 
     if has('cmdline_info')
@@ -154,7 +166,7 @@
     set splitright                  " Puts new vsplit windows to the right of the current
     set splitbelow                  " Puts new split windows to the bottom of the current
     "set matchpairs+=<:>             " Match, to be used with %
-    set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
+    set pastetoggle=<F9>            " pastetoggle (sane indentation on pastes)
     "set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
     " Remove trailing whitespaces and ^M chars
     autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
